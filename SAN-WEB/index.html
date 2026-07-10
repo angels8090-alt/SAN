@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAN - Asistente Personal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <h1>🧠 SAN</h1>
+        <p>Organiza tus tareas</p>
+
+        <input 
+            type="text" 
+            id="tareaInput" 
+            placeholder="Escribe una tarea..."
+        >
+
+        <select id="prioridad">
+            <option value="Alta">🔥 Alta</option>
+            <option value="Media">🟡 Media</option>
+            <option value="Baja">🟢 Baja</option>
+        </select>
+
+        <button onclick="agregarTarea()">
+            ➕ Agregar
+        </button>
+
+        <ul id="listaTareas"></ul>
+
+    </div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
