@@ -1,41 +1,133 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAN - Asistente Personal</title>
+
+    <title>SAN</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div class="app">
+<!-- Pantalla de Bienvenida -->
 
-        <h1>🧠 SAN</h1>
-        <p>Organiza tus tareas</p>
+<div id="pantallaBienvenida">
 
-        <input 
-            type="text" 
-            id="tareaInput" 
-            placeholder="Escribe una tarea..."
-        >
+    <div id="bienvenidaContenido">
 
-        <select id="prioridad">
-            <option value="Alta">❗️ Alta</option>
-            <option value="Media">🟠 Media</option>
-            <option value="Baja">🟢 Baja</option>
-        </select>
+        <h1 id="saludo">Buenos días</h1>
 
-        <button onclick="agregarTarea()">
-            ➕ Agregar
-        </button>
-
-        <ul id="listaTareas"></ul>
+        <p id="mensajeBienvenida">
+            Bienvenido de nuevo
+        </p>
 
     </div>
+
+</div>
+
+
+
+<!-- Inicio -->
+
+<div class="app">
+
+    <div class="logo">
+
+        <h1>🧠 SAN</h1>
+
+        <p>Tu asistente personal</p>
+
+    </div>
+
+
+
+    <div class="titulo">
+
+        <h2>¿Qué quieres hacer hoy?</h2>
+
+    </div>
+
+
+
+    <div class="menu">
+
+        <a href="tareas.html" class="menu-card">
+
+            <span class="icono">✅</span>
+
+            <div>
+
+                <h3>Mis tareas</h3>
+
+                <p>Organiza tus pendientes</p>
+
+            </div>
+
+        </a>
+
+
+
+        <a href="calendario.html" class="menu-card">
+
+            <span class="icono">📅</span>
+
+            <div>
+
+                <h3>Calendario</h3>
+
+                <p>Planea tu semana</p>
+
+            </div>
+
+        </a>
+
+
+
+        <a href="notas.html" class="menu-card">
+
+            <span class="icono">📝</span>
+
+            <div>
+
+                <h3>Notas</h3>
+
+                <p>Guarda tus ideas</p>
+
+            </div>
+
+        </a>
+
+
+
+        <a href="#" class="menu-card">
+
+            <span class="icono">🤖</span>
+
+            <div>
+
+                <h3>IA SAN</h3>
+
+                <p>Próximamente...</p>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</div>
 
 
 <script src="app.js"></script>
 
 </body>
+
 </html>
+

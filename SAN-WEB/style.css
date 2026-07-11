@@ -36,14 +36,14 @@ body {
     text-align: center;
 }
 
-h1 {
+.app h1 {
     font-size: 40px;
     margin-bottom: 5px;
 }
-
-p {
+.app p {
     color: #343333;
 }
+
 
 input, select {
     width: 100%;
@@ -88,15 +88,34 @@ button:hover{
 }
 
 li {
+
     list-style: none;
-    background: #f3f4f6;
-    padding: 15px;
-    margin-bottom: 12px;
-    border-radius: 10px;
+
+    background: white;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    border-radius: 18px;
+
     text-align: left;
 
     font-size: 18px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+
+    transition: .3s;
+
 }
+
+
+li:hover {
+
+    transform: translateY(-3px);
+
+}
+
 @media (max-width: 600px) {
 
     body {
@@ -132,5 +151,364 @@ li {
         padding: 16px;
         border-radius: 14px;
     }
+
+}
+/* ===========================
+   Pantalla de bienvenida
+=========================== */
+
+#pantallaBienvenida{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    background:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    transition:opacity 1s ease;
+
+}
+
+#bienvenidaContenido{
+
+    text-align:center;
+
+}
+
+#saludo{
+
+    font-size:48px;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    color:#222;
+
+}
+#saludo {
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+}
+/* Animación de bienvenida */
+
+#bienvenidaContenido {
+
+    animation: aparecer 1s ease;
+
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+#mensajeBienvenida {
+
+    font-size: 22px;
+
+    color: #555;
+
+    margin-top: 10px;
+
+}
+/* ===========================
+   Menú Principal SAN
+=========================== */
+
+.menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+.menu-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:white;
+
+    padding:22px;
+
+    border-radius:22px;
+
+    text-decoration:none;
+
+    color:#222;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.menu-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.icono{
+
+    font-size:38px;
+
+}
+
+.menu-card h3{
+
+    margin:0;
+
+    font-size:20px;
+
+}
+
+.menu-card p{
+
+    margin-top:5px;
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+.titulo{
+
+    margin-top:25px;
+
+    text-align:left;
+
+}
+
+.titulo h2{
+
+    font-size:22px;
+
+    color:#222;
+
+}
+
+.logo{
+
+    margin-bottom:15px;
+
+}
+
+.logo h1{
+
+    margin-bottom:5px;
+
+}
+
+.logo p{
+
+    color:#777;
+
+}
+/* ===========================
+   CALENDARIO
+=========================== */
+
+.volver{
+
+    text-decoration:none;
+
+    color:#2563eb;
+
+    font-weight:bold;
+
+    display:inline-block;
+
+    margin-bottom:20px;
+
+}
+
+.calendario{
+
+    margin-top:25px;
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.mes{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.mes h2{
+
+    margin:0;
+
+    font-size:22px;
+
+}
+
+.mes button{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f3f4f6;
+
+    color:#222;
+
+    cursor:pointer;
+
+}
+
+.dias-semana{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+    font-weight:bold;
+
+    color:#888;
+
+}
+
+.dias{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:12px;
+
+}
+
+.dia{
+
+    aspect-ratio:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:16px;
+
+    background:#f8fafc;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-weight:bold;
+
+}
+
+.dia:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+    transform:scale(1.08);
+
+}
+
+.activo{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+.panel-eventos{
+
+    margin-top:30px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.evento{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.evento:last-child{
+
+    border:none;
 
 }

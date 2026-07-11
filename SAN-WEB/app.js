@@ -102,14 +102,59 @@ function completarTarea(indice) {
     mostrarTareas();
 
 }
-cargarTareas();
+const input = document.getElementById("tareaInput");
 
-document.getElementById("tareaInput").addEventListener("keypress", function(event) {
+if (input) {
 
-    if (event.key === "Enter") {
-        agregarTarea();
-    }
+    cargarTareas();
 
-});
+    input.addEventListener("keypress", function(event) {
 
-mostrarTareas();
+        if (event.key === "Enter") {
+            agregarTarea();
+        }
+
+    });
+
+    mostrarTareas();
+
+}
+
+
+const saludo = document.getElementById("saludo");
+
+const hora = new Date().getHours();
+console.log("Hora:", hora);
+saludo.textContent = hora;
+
+
+if(hora >= 6 && hora < 12){
+
+    saludo.textContent = "☀️ Buenos días";
+
+}
+
+else if(hora >= 12 && hora < 19){
+
+    saludo.textContent = "🌤️ Buenas tardes";
+
+}
+
+else{
+
+    saludo.textContent = "🌙 Buenas noches";
+
+}
+setTimeout(() => {
+
+    const pantalla = document.getElementById("pantallaBienvenida");
+
+    pantalla.style.opacity = "0";
+
+    setTimeout(() => {
+
+        pantalla.style.display = "none";
+
+    }, 1000);
+
+}, 1200);

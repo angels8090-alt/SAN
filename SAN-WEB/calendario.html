@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calendario - SAN</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <a href="index.html" class="volver">
+        ← Inicio
+    </a>
+
+    <h1>📅 Calendario</h1>
+
+    <p>Organiza tu tiempo.</p>
+
+
+    <div class="calendario">
+
+        <div class="mes">
+
+            <button>◀</button>
+
+            <h2>Julio 2026</h2>
+
+            <button>▶</button>
+
+        </div>
+
+
+        <div class="dias-semana">
+
+            <span>L</span>
+            <span>M</span>
+            <span>M</span>
+            <span>J</span>
+            <span>V</span>
+            <span>S</span>
+            <span>D</span>
+
+        </div>
+
+
+        <div class="dias">
+
+            <div></div>
+            <div></div>
+
+            <div class="dia">1</div>
+            <div class="dia">2</div>
+            <div class="dia">3</div>
+            <div class="dia">4</div>
+            <div class="dia">5</div>
+
+            <div class="dia">6</div>
+            <div class="dia">7</div>
+            <div class="dia">8</div>
+            <div class="dia">9</div>
+            <div class="dia">10</div>
+            <div class="dia">11</div>
+            <div class="dia">12</div>
+
+            <div class="dia">13</div>
+            <div class="dia">14</div>
+            <div class="dia activo">15</div>
+            <div class="dia">16</div>
+            <div class="dia">17</div>
+            <div class="dia">18</div>
+            <div class="dia">19</div>
+
+            <div class="dia">20</div>
+            <div class="dia">21</div>
+            <div class="dia">22</div>
+            <div class="dia">23</div>
+            <div class="dia">24</div>
+            <div class="dia">25</div>
+            <div class="dia">26</div>
+
+            <div class="dia">27</div>
+            <div class="dia">28</div>
+            <div class="dia">29</div>
+            <div class="dia">30</div>
+            <div class="dia">31</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+<script src="calendario.js"></script>
+
+
+</body>
+
+</html>
+<div class="panel-eventos">
+
+    <h2>📅 Eventos</h2>
+
+    <ul id="listaEventos"></ul>
+
+    <button onclick="agregarEvento()">
+        ➕ Agregar evento
+    </button>
+
+</div>
